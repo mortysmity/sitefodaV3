@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>slider in Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <a href="/index.html"><img src="images/logo.png" alt="Logo da Empresa"></a>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre </a></li>
+            <li><a href="#">catalogos </a></li>
+            <li><a href="#">preço </a></li>
+        </nav>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('images/banerA.png')">
+                <div class="container">
+                    <div class="caption">
+                        <!--<h1>1. Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/banerb.pngs')">
+                <div class="container">
+                    <div class="caption">
+                        <!--<h1>2. Winter ngCollection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/banerc.png')">
+                <div class="container">
+                    <div class="caption">
+                        <!--<h1>3. Winter Collection 2020</h1>
+                    <p>Lorem ipsum dummy text goes here.</p>
+                    <a href="">Shop Now</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- controls  -->
+        <div class="controls">
+            <div class="prev">
+                <</div> <div class="next">>
+            </div>
+        </div>
+
+        <!-- indicators -->
+        <div class="indicator">
+        </div>
+
+    </section>
+
+    <section id="parallaxBar" data-speed="6" data-type="background">
+        <div class="container-fluid">
+        </div>
+    </section>
+    <section id="textop">
+        <p>Bem-vindo!!A um mundo de diversão com muitos desafios.Onde você encotrará diversos mundos.<br>
+            Venha conhecer e viver novas experiências.Tudo isso está disponível no nosso site  Bad rabbit.<br>
+             Temos uma  promoção 5% de desconto  na primeira compra . Nossos preços estão abaixo da valor de mercado!
+              <br> Com valores de até $500<br> Em caso de duvida ou se ocorrer algum problema, entre em contato pelos 
+              nossos canais. <divid="canais"><a href="#"> Canais </a></div> </p>
+   
+    <script src="script.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $window = $(window);
+            //Captura cada elemento section com o data-type "background"
+            $('section[data-type="background"]').each(function () {
+                var $scroll = $(this);
+                //Captura o evento scroll do navegador e modifica o backgroundPosition de acordo com seu deslocamento.            
+                $(window).scroll(function () {
+                    var yPos = -($window.scrollTop() / $scroll.data('speed'));
+                    var coords = '50% ' + yPos + 'px';
+                    $scroll.css({
+                        backgroundPosition: coords
+                    });
+                });
+            });
+        });
+        
+    </script>
+    </section>
+     <div id="catalogos">
+         <h1>catalogos</h1>
+         <h1>aventura</h1>
+     </div>
+    <div class="aventuogoraj1" >
+     <img src="images/minecraftdungeon.jpg" alt="minecraft" width="300px" height="300px">
+     <p>Minecraft Dungeons</p>
+     <p>lançamento 26 de maio de 2020</p>
+     <p>plataformas:PlayStation 4, <br>Nintendo Switch<br>, Xbox One, Microsoft Windows</p>
+     <p>Desenvolvedor: Ubisoft Montreal</p>
+     <P>preço:$100 </P>
+     <button>compra</button>
+     <button>carinho</button>
+    </div>
+    
+    <div class="aventuraj2" >
+        <img src="images/zelda.png" alt="zelda" width="300px" height="300px">
+        <p>The Legend of Zelda: Breath of the Wild</p>
+        <p>lançamento 3 de março de 2017</p>
+        <p>plataformas:Nintendo Switch, Wii U</p>
+        <p>Desenvolvedor: Ubisoft Montreal</p>
+        <P>preço:$300</P>
+        <button>compra</button>
+        <button>carinho</button>
+    </div>
+    <div class="aventuraj3" >
+        <img src="images/Assassins_Creed_Valhalla_capa.png" alt="assassins" width="300px" height="300px">
+        <p>Assassin's Creed Valhalla</p>
+        <p>lançamento 34 dezembro de 2020</p>
+        <p>plataformas:PlayStation 5, Xbox Series X, PlayStation 4,<br> Xbox One,Microsoft Windows</p>
+        <p>Desenvolvedor: Ubisoft Montreal</p>
+        <P>preço:$500</P>
+        <button>compra</button>
+        <button>carinho</button>
+    </div>
+</body>
+
+</html>
